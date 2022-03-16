@@ -19,6 +19,7 @@ class EmployeesAddForm extends Component {
 
 	onSubmit = (e) => {
 		e.preventDefault();
+		// enter validation here!!???
 		this.props.onAdd(this.state.name, this.state.salary);
 		this.setState({
 			name: '',
