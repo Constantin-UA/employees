@@ -33,10 +33,9 @@ class App extends Component {
 			};
 		}); */
 	};
-	addNewEmp = (name, salary) => {
-		console.log(name, salary);
+	addItem = (name, salary) => {
 		this.setState({
-			data: [...this.state.data, { name, salary, id: nextId() }],
+			data: [...this.state.data, { name, salary, increase: false, id: nextId() }],
 		});
 	};
 	render() {
@@ -50,7 +49,7 @@ class App extends Component {
 				</div>
 
 				<EmployeesLitst data={this.state.data} onDelete={this.deleteItem} />
-				<EmployeesAddForm onSubmit={this.addNewEmp} />
+				<EmployeesAddForm onAdd={this.addItem} />
 			</div>
 		);
 	}
