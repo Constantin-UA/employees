@@ -1,4 +1,5 @@
 import './employees-list-item.css';
+//Зробити інпут ЗП і записати значення до бази
 
 const EmployeesListItem = (props) => {
 	const { name, salary, onDelete, onToggleProp, increase, rise } = props;
